@@ -1,0 +1,11 @@
+.users {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+#sentinel {
+  height: 20px;
+  background-color: red;
+}
