@@ -42,7 +42,9 @@ export default function index() {
         const res = await axios.get(URLCONFIGURED);
         setUsers((prevState) => [...prevState, ...res.data]);
       } catch (error) {
+        
         setCurrentPage((prevState) => prevState - 1);
+
         // const sentinel = document.querySelector("#sentinel") as Element;
         // sentinel.style.display = "none";
 

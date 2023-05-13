@@ -4,16 +4,31 @@ import Users from "./pages/Users";
 import { Route, Routes } from "react-router-dom";
 import Layout from "./pages/Layout";
 
-import "./App.scss";
+import Login from "./pages/Login";
+import PrivateRoute from "./routes/PrivateRoute";
 
 function App() {
   return (
     <Routes>
-      <Route path="/" element={<Layout />}>
-        <Route path="users" element={<Users />} />
+      
+      <Route path="login" element={<Login />} />
+      
+      {/* private routes */}
+      <Route path="/" element={<PrivateRoute />}>
+        <Route element={<Layout />}>
+          <Route path="users" element={<Users />} />
+        </Route>
+        <Route path="*" element={<NotFound />} />
       </Route>
-      <Route path="*" element={<NotFound />} />
     </Routes>
+
+    // <Routes>
+    //   <Route path="login" element={<Login />} />
+    //   <Route path="/" element={<Layout />}>
+    //     <Route path="users" element={<Users />} />
+    //   </Route>
+    //   <Route path="*" element={<NotFound />} />
+    // </Routes>
   );
 }
 

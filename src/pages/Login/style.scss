@@ -1,0 +1,55 @@
+.login {
+  font-family: "Karla", sans-serif;
+  align-items: center;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  padding: 1rem;
+  width: 100%;
+
+  &__form {
+    background-color: #fff;
+    padding: 2em;
+    border-radius: .5em;
+    border: 1px solid #eed;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 1em;
+    max-width: 450px;
+    box-shadow: 4px 4px 10px black;
+
+    &--input {
+      border-radius: 0.2rem;
+      padding: 0.5em;
+      flex: 1;
+      border: 1px solid #3333334b;
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    &--btn {
+      $bg-clr: #6263c4;
+
+      background-color: $bg-clr;
+      border-radius: 0.2rem;
+      border: none;
+      color: white;
+      flex: 1;
+      font-family: "Signika Negative", sans-serif;
+      font-weight: 400;
+      letter-spacing: 1.5px;
+      padding: 0.5em;
+      
+      &:hover {
+        background-color: lighten($bg-clr, 10%);
+      }
+      &:active {
+        background-color: darken($bg-clr, 10%);
+      }
+
+    }
+  }
+}
