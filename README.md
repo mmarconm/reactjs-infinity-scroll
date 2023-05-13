@@ -1,4 +1,4 @@
-# Project Name
+# Reactjs Infinity Scroll
 
 A simple Reactjs Application using Observer API for infinity scrolling.
 
