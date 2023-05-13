@@ -29,7 +29,7 @@ export default function index() {
   const [users, setUsers] = React.useState<UserType[]>([]);
   const [loading, setLoading] = React.useState(false);
   const [currentPage, setCurrentPage] = React.useState<number>(1);
-  const [perPage, setPerPage] = React.useState<number>(10);
+  const [perPage, setPerPage] = React.useState<number>(5);
 
   React.useEffect(() => {
     // GET POSTS FROM API
@@ -42,10 +42,10 @@ export default function index() {
         const res = await axios.get(URLCONFIGURED);
         setUsers((prevState) => [...prevState, ...res.data]);
       } catch (error) {
+        setCurrentPage((prevState) => prevState - 1);
         // const sentinel = document.querySelector("#sentinel") as Element;
         // sentinel.style.display = "none";
 
-        setCurrentPage((prevState) => prevState - 1); // Decrease current page to retry the failed request
         console.error("Error fetching users:", error);
       }
 

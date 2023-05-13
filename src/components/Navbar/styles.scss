@@ -1,0 +1,17 @@
+.navbar {
+  font-family: "Karla", sans-serif;
+  color: white;
+  background-color: #333;
+  padding: 1rem;
+  .navbar__menu {
+    display: flex;
+    gap: 2rem;
+    justify-content: end;
+    li {
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+    }
+  }
+}
